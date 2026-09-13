@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch | Capital One Intelligence Dashboard</title>
+    <!-- Librerías de Reveal.js para la presentación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        /* Estilos corporativos Capital One y diseño tipo tarjeta */
+        :root {
+            --capital-blue: #004b87;
+            --capital-red: #d22e1e;
+            --capital-light: #f4f5f7;
+            --money-green: #198754;
+        }
+
+        /* Reducción general de la fuente (un punto menos) */
+        .reveal {
+            font-size: 36px;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            text-transform: none;
+        }
+
+        /* Estilo de tarjeta para cada diapositiva */
+        .reveal section {
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            padding: 40px !important;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Excepción para portada y live demo (fondo azul sólido) */
+        .reveal section.bg-blue {
+            background-color: var(--capital-blue) !important;
+            color: white;
+            border: none;
+        }
+
+        .text-blue { color: var(--capital-blue) !important; }
+        .text-red { color: var(--capital-red) !important; }
+        
+        .highlight-box {
+            background: var(--capital-light);
+            border-left: 5px solid var(--capital-red);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 0.75em;
+            text-align: left;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .reveal ul, .reveal ol {
+            display: block;
+            text-align: left;
+            font-size: 0.75em;
+            line-height: 1.4;
+        }
+        .reveal li { margin-bottom: 12px; }
+
+        /* Logotipo corporativo en la esquina superior sin invadir el título */
+        .slide-logo {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            height: 26px;
+            object-fit: contain;
+        }
+
+        /* Evitar que el título choque con el logo */
+        .reveal section h2 {
+            padding-right: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Diapositiva 1 -->
+            <section class="bg-blue">
+                <h1 style="color: white; font-size: 2.6em;">
+                    <span style="color: var(--capital-red);">Capital</span> One
+                </h1>
+                <h3 style="color: #8ee2cc; font-size: 1.1em;">Intelligence & Security Dashboard</h3>
+                <p style="font-size: 1em; margin-top: 30px;">De una banca pasiva a la autonomía financiera proactiva.</p>
+                <p style="font-size: 0.55em; margin-top: 40px; opacity: 0.7;">HackMTY 2026</p>
+            </section>
+
+            <!-- Diapositiva 2 -->
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg" class="slide-logo" alt="Capital One Logo">
+                <h2 class="text-blue" style="font-size: 1.6em;">El Problema</h2>
+                <div style="display: flex; gap: 30px; margin-top: 30px;">
+                    <div style="flex: 1; text-align: center;">
+                        <i class="bi bi-person-exclamation text-red" style="font-size: 3.2em;"></i>
+                        <h4 class="text-blue" style="margin-top: 15px; font-size: 0.9em;">Fatiga Financiera (B2C)</h4>
+                        <p style="font-size: 0.65em;">Los consumidores sufren fatiga de decisión y operan bajo modelos de crédito pasivos y estáticos.</p>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <i class="bi bi-shield-x text-red" style="font-size: 3.2em;"></i>
+                        <h4 class="text-blue" style="margin-top: 15px; font-size: 0.9em;">Reglas Estáticas (Security)</h4>
+                        <p style="font-size: 0.65em;">Los patrones de fraude evolucionan más rápido de lo que los sistemas tradicionales pueden detectar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 3 -->
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg" class="slide-logo" alt="Capital One Logo">
+                <h2 class="text-blue" style="font-size: 1.6em;">Nuestra Solución</h2>
+                <p style="font-size: 0.8em; margin-bottom: 30px;">Transformamos flujos de datos en bienestar y seguridad activos.</p>
+                <ul>
+                    <li><strong class="text-red">Pilar 1: Autonomía Financiera.</strong> Planificador inteligente impulsado por IA (Gemini) que proyecta liquidez y automatiza el micro-ahorro basado en el estilo de vida.</li>
+                    <li><strong class="text-red">Pilar 2: Security Sentinel.</strong> Motor de detección de anomalías en tiempo real que evalúa velocidad de transacciones y <i>Category Hops</i> (saltos inusuales de categoría).</li>
+                </ul>
+            </section>
+
+            <!-- Diapositiva 4 -->
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg" class="slide-logo" alt="Capital One Logo">
+                <h2 class="text-blue" style="font-size: 1.6em;">Profundidad Técnica</h2>
+                <div class="highlight-box">
+                    <strong><i class="bi bi-database-fill-check text-blue"></i> Data Foundation:</strong> Integración directa con <b>Capital One Nessie API</b> para extracción de datos crudos (cuentas, retiros, depósitos).
+                </div>
+                <div class="highlight-box">
+                    <strong><i class="bi bi-cpu-fill text-blue"></i> Algorithmic Logic:</strong>
+                    En lugar de promedios simples, usamos <b>Block Bootstrap</b> y <b>10,000 simulaciones de Monte Carlo</b> para calcular el Riesgo Condicional (CVaR).
+                </div>
+                <div class="highlight-box">
+                    <strong><i class="bi bi-diagram-3-fill text-blue"></i> System Design:</strong>
+                    Arquitectura limpia (PHP/MVC) que separa el Detector de Fraude (Machine Learning proxy) del Motor Financiero, todo orquestado por un modelo Gemini Flash.
+                </div>
+            </section>
+
+            <!-- Diapositiva 5 -->
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg" class="slide-logo" alt="Capital One Logo">
+                <h2 class="text-blue" style="font-size: 1.6em;">Diseño y Experiencia</h2>
+                <div style="display: flex; align-items: center; gap: 25px; margin-top: 15px;">
+                    <div style="flex: 1.2; font-size: 0.7em; text-align: left;">
+                        <p><strong class="text-red">User Persona:</strong> "Alex Rivera" (Millennial/Gen Z). Busca maximizar sus ahorros sin sobregirarse, pero está expuesto a fraudes de e-commerce modernos.</p>
+                        <hr style="margin: 8px 0;">
+                        <p><strong class="text-blue">User Journey Map:</strong></p>
+                        <ol style="font-size: 0.95em; padding-left: 15px;">
+                            <li><b>Detección:</b> Ingreso recurrente detectado vía Nessie API.</li>
+                            <li><b>Acción Proactiva:</b> El motor calcula un ahorro seguro al 95% y el chatbot Gemini guía la reserva.</li>
+                            <li><b>Seguridad Invisible:</b> En cada compra, <i>Security Sentinel</i> evalúa silenciosamente el <i>Category Hop</i> y velocidad.</li>
+                        </ol>
+                    </div>
+                    <div style="flex: 0.8; text-align: center;">
+                        <!-- CAMBIA ESTE ENLACE por el link directo de tu imagen (ej: de Imgur o tu hosting) -->
+                        <img src="Gemini_Generated_Image_a4if0qa4if0qa4if.jpg" style="max-height: 250px; width: 100%; object-fit: contain; border-radius: 8px;" alt="App Mockup Custom">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 6 -->
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg" class="slide-logo" alt="Capital One Logo">
+                <h2 class="text-blue" style="font-size: 1.6em;">Mercado y Escala</h2>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 25px;">
+                    <div style="background: #004b87; color: white; width: 80%; padding: 12px; border-radius: 6px; font-size: 0.75em;">
+                        <strong>TAM:</strong> Millones de usuarios de banca digital global.
+                    </div>
+                    <div style="background: #198754; color: white; width: 65%; padding: 12px; border-radius: 6px; font-size: 0.75em;">
+                        <strong>SAM:</strong> +150 Millones de clientes de Capital One.
+                    </div>
+                    <div style="background: #d22e1e; color: white; width: 50%; padding: 12px; border-radius: 6px; font-size: 0.75em;">
+                        <strong>SOM:</strong> 5% de usuarios (Early adopters / 7.5M) para validación del modelo inicial.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 7 -->
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg" class="slide-logo" alt="Capital One Logo">
+                <h2 class="text-blue" style="font-size: 1.6em;">Modelo de Negocios</h2>
+                <ul>
+                    <li><strong class="text-red">Viabilidad:</strong> Al automatizar el ahorro seguro, Capital One incrementa agresivamente su captación de depósitos (liquidez operativa).</li>
+                    <li><strong class="text-red">Retorno de Inversión:</strong> Reducción dramática en pérdidas millonarias por contracargos mediante bloqueos preventivos del <i>Security Sentinel</i>.</li>
+                    <li><strong class="text-red">Go-To-Market:</strong> Integración nativa como un "feature" gratuito (Asistente de Resiliencia) en la app actual de Capital One. Arquitectura Cloud-native lista para escalar.</li>
+                </ul>
+            </section>
+
+            <!-- Diapositiva: Viabilidad Operativa y Costos -->
+            <section>
+                <!-- Título y logo en la misma línea para ahorrar espacio -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 class="text-blue" style="font-size: 1.4em; margin: 0;">Viabilidad Operativa y Costos</h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg" class="slide-logo" alt="Capital One Logo" style="width: 130px; margin: 0;">
+                </div>
+
+                <div style="display: flex; align-items: flex-start; gap: 25px;">
+                    <div style="flex: 1.2; font-size: 0.6em; text-align: left; line-height: 1.3;">
+                        <p style="margin-bottom: 10px;"><strong class="text-red">Arquitectura de Alta Eficiencia:</strong> Escalable y de bajo costo inicial.</p>
+                        <hr style="margin: 5px 0 15px 0; border-top: 2px solid var(--capital-blue);">
+                        
+                        <ul style="padding-left: 20px;">
+                            <li style="margin-bottom: 12px;"><b>Costo de Desarrollo (MVP): $0.</b> Construido ágilmente usando la API de Nessie, evitando los costos de levantar un backend bancario desde cero.</li>
+                            <li style="margin-bottom: 12px;"><b>Infraestructura (OCI & MongoDB): ~$20 USD/mes.</b> Despliegue en instancias ARM de Oracle Cloud con bases de datos NoSQL Serverless. Pagando solo por uso activo.</li>
+                            <li style="margin-bottom: 12px;"><b>Inteligencia Artificial (Gemini Flash): ~$0.075 USD por 1M tokens.</b> Modelo ultraligero que permite analizar miles de transacciones en tiempo real por centavos al día.</li>
+                            <li><b>Retorno de Inversión (ROI):</b> Operar el MVP cuesta menos de $50 USD al mes, mitigando pérdidas por fraudes que cuestan millones anuales.</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="flex: 0.8; text-align: center; margin-top: 15px;">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop" style="max-height: 280px; width: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" alt="Arquitectura Cloud OCI">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 8 -->
+            <section class="bg-blue">
+                <h1 style="color: white; font-size: 2.6em;">Live Demo</h1>
+                <h3 style="color: #8ee2cc; font-size: 1.1em;">Es hora de ver el código en acción</h3>
+                <i class="bi bi-laptop" style="font-size: 4em; margin-top: 15px; color: var(--capital-red);"></i>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Scripts de Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'slide'
+        });
+    </script>
+</body>
+</html>
